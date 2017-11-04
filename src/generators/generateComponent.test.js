@@ -49,7 +49,7 @@ test('generates default component', () => {
 test('generates pure component', () => {
   const componentConfig = {
     name: 'Test',
-    type: 'PureComponent'
+    type: 'pure-component'
   }
 
   expect(generateComponent(componentConfig)).toBe(pureComponent)
@@ -58,7 +58,7 @@ test('generates pure component', () => {
 test('generates function component', () => {
   const componentConfig = {
     name: 'Test',
-    type: 'Function'
+    type: 'function'
   }
 
   expect(generateComponent(componentConfig)).toBe(functionComponent)
@@ -67,7 +67,7 @@ test('generates function component', () => {
 test('generates arrow function component', () => {
   const componentConfig = {
     name: 'Test',
-    type: 'ArrowFunction'
+    type: 'arrow-function'
   }
 
   expect(generateComponent(componentConfig)).toBe(arrowFunctionComponent)

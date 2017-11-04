@@ -1,4 +1,9 @@
-const importReact = ({ type = 'Component' }) => `import React${type.includes('Function') ? '' : `, { ${type} }`} from 'react'`
+const COMPONENT_TYPES = {
+  'pure-component': 'PureComponent',
+  'component': 'Component'
+}
+
+const importReact = ({ type = 'component' }) => `import React${type.includes('component') ? `, { ${COMPONENT_TYPES[type]} }` : ''} from 'react'`
 
 const importReactNative = ({ environment }) => environment === 'react-native' ? `\nimport { View } from 'react-native'` : ''
 

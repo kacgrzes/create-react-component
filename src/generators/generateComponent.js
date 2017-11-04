@@ -25,13 +25,13 @@ const generateArrowFunctionComponent = componentConfig =>
 
 const generateContent = componentConfig => {
   switch (componentConfig.type) {
-    case 'Function': 
+    case 'function': 
       return generateFunctionComponent(componentConfig)
-    case 'ArrowFunction': 
+    case 'arrow-function': 
       return generateArrowFunctionComponent(componentConfig)
-    case 'PureComponent':
+    case 'pure-component':
       return generatePureComponent(componentConfig)
-    case 'Component':
+    case 'component':
       return generateClassComponent(componentConfig)
     default:
       return generateClassComponent(componentConfig)

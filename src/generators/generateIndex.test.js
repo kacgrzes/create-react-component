@@ -9,7 +9,7 @@ export default Test
 const demoIndexContent =
 `import Demo from './Demo.jsx'
 
-export default Test
+export default Demo
 `
 
 test('generates index for Test.js component', () => {

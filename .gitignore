@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/visualstudiocode
 
+### create-react-component ###
+temp/
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
