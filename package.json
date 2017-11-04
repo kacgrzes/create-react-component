@@ -1,0 +1,27 @@
+{
+  "name": "create-react-component",
+  "version": "0.1.0",
+  "description": "CLI tool to create react or react-native component",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start:dev": "nodemon src/index.js --exec babel-node",
+    "start": "babel-node src/index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.11.0",
+    "fs-extra": "^4.0.2",
+    "inquirer": "^3.3.0"
+  }
+}
