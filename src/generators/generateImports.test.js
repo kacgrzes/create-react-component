@@ -24,7 +24,7 @@ test('generates pure component imports', () => {
 test('generates react-native imports', () => {
   const componentConfig = {
     name: 'Test',
-    environment: 'react-native'
+    platform: 'react-native'
   }
 
   const result = `import React, { Component } from 'react'\nimport { View } from 'react-native'`
@@ -36,7 +36,7 @@ test('generates pure component react-native imports', () => {
   const componentConfig = {
     name: 'Test',
     type: 'pure-component',
-    environment: 'react-native'
+    platform: 'react-native'
   }
 
   const result = `import React, { PureComponent } from 'react'\nimport { View } from 'react-native'`

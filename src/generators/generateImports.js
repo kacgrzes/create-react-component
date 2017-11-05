@@ -5,7 +5,7 @@ const COMPONENT_TYPES = {
 
 const importReact = ({ type = 'component' }) => `import React${type.includes('component') ? `, { ${COMPONENT_TYPES[type]} }` : ''} from 'react'`
 
-const importReactNative = ({ environment }) => environment === 'react-native' ? `\nimport { View } from 'react-native'` : ''
+const importReactNative = ({ platform }) => platform === 'react-native' ? `\nimport { View } from 'react-native'` : ''
 
 const generateImports = componentConfig =>
 `\

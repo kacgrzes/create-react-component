@@ -1,5 +1,5 @@
-const generateRender = ({ name, environment }) => {
-  switch (environment) {
+const generateRender = ({ name, platform }) => {
+  switch (platform) {
     case 'react':
       return `<div>${name}</div>`
     case 'react-native':

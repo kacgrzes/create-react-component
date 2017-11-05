@@ -42,8 +42,8 @@ const questions = [
   },
   {
     type: 'list',
-    name: 'environment',
-    message: 'Where will you use your component?',
+    name: 'platform',
+    message: 'On what platform will you use your component?',
     choices: [
       'react',
       'react-native'

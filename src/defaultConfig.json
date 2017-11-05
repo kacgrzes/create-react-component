@@ -1,5 +1,5 @@
 {
   "name": "Test",
   "type": "component",
-  "environment": "react"
+  "platform": "react"
 }

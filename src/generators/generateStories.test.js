@@ -23,7 +23,7 @@ storiesOf('Demo', module)
 test('generates default component stories', () => {
   const componentConfig = {
     name: 'Test',
-    environment: 'react'
+    platform: 'react'
   }
 
   expect(generateStories(componentConfig)).toBe(reactComponentStories)
@@ -32,7 +32,7 @@ test('generates default component stories', () => {
 test('generates react-native component stories', () => {
   const componentConfig = {
     name: 'Demo',
-    environment: 'react-native'
+    platform: 'react-native'
   }
 
   expect(generateStories(componentConfig)).toBe(reactNativeComponentStories)
