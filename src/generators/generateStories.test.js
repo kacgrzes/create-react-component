@@ -20,20 +20,22 @@ storiesOf('Demo', module)
   )
 `
 
-test('generates default component stories', () => {
-  const componentConfig = {
-    name: 'Test',
-    platform: 'react'
-  }
-
-  expect(generateStories(componentConfig)).toBe(reactComponentStories)
-})
-
-test('generates react-native component stories', () => {
-  const componentConfig = {
-    name: 'Demo',
-    platform: 'react-native'
-  }
-
-  expect(generateStories(componentConfig)).toBe(reactNativeComponentStories)
+describe('generateStories functionality', () => {
+  test('default (react) component stories', () => {
+    const componentConfig = {
+      name: 'Test',
+      platform: 'react'
+    }
+  
+    expect(generateStories(componentConfig)).toBe(reactComponentStories)
+  })
+  
+  test('react-native component stories', () => {
+    const componentConfig = {
+      name: 'Demo',
+      platform: 'react-native'
+    }
+  
+    expect(generateStories(componentConfig)).toBe(reactNativeComponentStories)
+  })
 })

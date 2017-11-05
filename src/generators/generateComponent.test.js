@@ -38,37 +38,39 @@ const Test = props => <div>Test</div>
 export default Test
 `
 
-test('generates default component', () => {
-  const componentConfig = {
-    name: 'Test'
-  }
-
-  expect(generateComponent(componentConfig)).toBe(defaultComponent)
-})
-
-test('generates pure component', () => {
-  const componentConfig = {
-    name: 'Test',
-    type: 'pure-component'
-  }
-
-  expect(generateComponent(componentConfig)).toBe(pureComponent)
-})
-
-test('generates function component', () => {
-  const componentConfig = {
-    name: 'Test',
-    type: 'function'
-  }
-
-  expect(generateComponent(componentConfig)).toBe(functionComponent)
-})
-
-test('generates arrow function component', () => {
-  const componentConfig = {
-    name: 'Test',
-    type: 'arrow-function'
-  }
-
-  expect(generateComponent(componentConfig)).toBe(arrowFunctionComponent)
+describe('generateComponent functionality', () => {
+  test('default component', () => {
+    const componentConfig = {
+      name: 'Test'
+    }
+  
+    expect(generateComponent(componentConfig)).toBe(defaultComponent)
+  })
+  
+  test('pure component', () => {
+    const componentConfig = {
+      name: 'Test',
+      type: 'pure-component'
+    }
+  
+    expect(generateComponent(componentConfig)).toBe(pureComponent)
+  })
+  
+  test('function component', () => {
+    const componentConfig = {
+      name: 'Test',
+      type: 'function'
+    }
+  
+    expect(generateComponent(componentConfig)).toBe(functionComponent)
+  })
+  
+  test('arrow function component', () => {
+    const componentConfig = {
+      name: 'Test',
+      type: 'arrow-function'
+    }
+  
+    expect(generateComponent(componentConfig)).toBe(arrowFunctionComponent)
+  })
 })

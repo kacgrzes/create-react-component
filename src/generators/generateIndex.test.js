@@ -12,19 +12,21 @@ const demoIndexContent =
 export default Demo
 `
 
-test('generates index for Test.js component', () => {
-  const componentConfig = {
-    name: 'Test'
-  }
-
-  expect(generateIndex(componentConfig)).toBe(defaultIndexContent)
-})
-
-test('generates index for Demo.jsx component', () => {
-  const componentConfig = {
-    name: 'Demo',
-    jsExtension: 'jsx'
-  }
-
-  expect(generateIndex(componentConfig)).toBe(demoIndexContent)
+describe('generateIndex functionality', () => {
+  test('Test.js component', () => {
+    const componentConfig = {
+      name: 'Test'
+    }
+  
+    expect(generateIndex(componentConfig)).toBe(defaultIndexContent)
+  })
+  
+  test('Demo.jsx component', () => {
+    const componentConfig = {
+      name: 'Demo',
+      jsExtension: 'jsx'
+    }
+  
+    expect(generateIndex(componentConfig)).toBe(demoIndexContent)
+  })
 })
