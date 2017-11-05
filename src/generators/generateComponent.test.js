@@ -1,6 +1,7 @@
 import generateComponent from './generateComponent'
 
-const defaultComponent = `import React, { Component } from 'react'
+const defaultComponent =
+`import React, { Component } from 'react'
 
 class Test extends Component {
   render () {
@@ -11,7 +12,8 @@ class Test extends Component {
 export default Test
 `
 
-const pureComponent = `import React, { PureComponent } from 'react'
+const pureComponent =
+`import React, { PureComponent } from 'react'
 
 class Test extends PureComponent {
   render () {
@@ -22,7 +24,8 @@ class Test extends PureComponent {
 export default Test
 `
 
-const functionComponent = `import React from 'react'
+const functionComponent =
+`import React from 'react'
 
 function Test (props) {
   return <div>Test</div>
@@ -31,7 +34,8 @@ function Test (props) {
 export default Test
 `
 
-const arrowFunctionComponent = `import React from 'react'
+const arrowFunctionComponent =
+`import React from 'react'
 
 const Test = props => <div>Test</div>
 

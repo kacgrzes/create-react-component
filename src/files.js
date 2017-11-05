@@ -7,7 +7,7 @@ import {
 } from './generators'
 
 const createComponentFile = async (componentConfig) => {
-  const { path = 'temp', name = 'test', jsExtension = 'js' } = componentConfig
+  const { path = 'temp', name = 'Test', jsExtension = 'js' } = componentConfig
 
   try {
     const fullPath = `${path}/${name}/${name}.${jsExtension}`
@@ -20,7 +20,7 @@ const createComponentFile = async (componentConfig) => {
 }
 
 const createIndexFile = async (componentConfig) => {
-  const { path = 'temp', name = 'test' } = componentConfig
+  const { path = 'temp', name = 'Test', jsExtension = 'js' } = componentConfig
 
   try {
     const fullPath = `${path}/${name}/index.js`
@@ -33,7 +33,7 @@ const createIndexFile = async (componentConfig) => {
 }
 
 const createStoriesFile = async (componentConfig) => {
-  const { path = 'temp', name = 'test' } = componentConfig
+  const { path = 'temp', name = 'Test' } = componentConfig
 
   try {
     const fullPath = `${path}/${name}/${name}.stories.js`
@@ -45,11 +45,8 @@ const createStoriesFile = async (componentConfig) => {
   }  
 }
 
-const demoConfig = {
-  name: 'Demo',
-  environment: 'react-native'
+export {
+  createStoriesFile,
+  createIndexFile,
+  createComponentFile
 }
-
-createStoriesFile(demoConfig)
-createIndexFile(demoConfig)
-createComponentFile(demoConfig)
