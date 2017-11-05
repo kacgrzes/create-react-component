@@ -27,6 +27,8 @@ const demoComponentContent =
 
 const Demo = props => <div>Demo</div>
 
+Demo.propTypes = {}
+
 export default Demo
 `
 

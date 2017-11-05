@@ -9,6 +9,10 @@ class Test extends Component {
   }
 }
 
+Test.propTypes = {}
+
+Test.defaultProps = {}
+
 export default Test
 `
 
@@ -21,6 +25,10 @@ class Test extends PureComponent {
   }
 }
 
+Test.propTypes = {}
+
+Test.defaultProps = {}
+
 export default Test
 `
 
@@ -31,6 +39,8 @@ function Test (props) {
   return <div>Test</div>
 }
 
+Test.propTypes = {}
+
 export default Test
 `
 
@@ -38,6 +48,8 @@ const arrowFunctionComponent =
 `import React from 'react'
 
 const Test = props => <div>Test</div>
+
+Test.propTypes = {}
 
 export default Test
 `

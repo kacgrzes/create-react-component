@@ -1,5 +1,6 @@
 import generateImports from './generateImports'
 import generateRender from './generateRender'
+import generatePropTypes from './generatePropTypes'
 
 const generateClassComponent = componentConfig =>
 `class ${componentConfig.name} extends Component {
@@ -44,6 +45,8 @@ const generateComponent = componentConfig =>
 `${generateImports(componentConfig)}
 
 ${generateContent(componentConfig)}
+
+${generatePropTypes(componentConfig)}
 
 ${generateExport(componentConfig)}
 `
