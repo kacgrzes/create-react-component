@@ -1,9 +1,12 @@
 import inquirer from 'inquirer'
 import questions from './questions'
 
-const generator = async () => {
+const wizard = async () => {
   const answers = await inquirer.prompt(questions)
+  
   console.log(answers)
 }
 
-generator()
+wizard()
+
+export default wizard
