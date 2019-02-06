@@ -6,19 +6,13 @@ const questions = [
     name: 'type',
     message: 'What kind of component do you want to create?',
     choices: [
-      new inquirer.Separator('Stateless'),
+      new inquirer.Separator('Stateless with'),
       'arrow-function',
       'function',
-      new inquirer.Separator('Stateful'),
+      new inquirer.Separator('Stateful with'),
       'component',
       'pure-component'
-    ],
-    filter: value => {
-      const regex = /\((.*?)\)/g // find value between brackets e.g. (ArrowFunction)
-      const [_, match] = regex.exec(value)
-
-      return match
-    }
+    ]
   },
   {
     type: 'input',
@@ -48,7 +42,17 @@ const questions = [
       'react',
       'react-native'
     ]
-  }
+  },
+  {
+    type: 'list',
+    name: 'jsExtension',
+    message: 'What file extension do you want to use?',
+    choices: [
+      'js',
+      'jsx'
+    ]
+  },
+  
 ]
 
 export default questions
